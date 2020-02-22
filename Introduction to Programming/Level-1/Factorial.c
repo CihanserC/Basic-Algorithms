@@ -14,11 +14,9 @@ int main()
 	if(n<0)
 	{
 		printf("Only positive numbers have factorial");
-	
 		printf("Error , Enter a number that greater than 0.");
 	
 	}else{
-		
 		for(i=1;i<=n;i++)
 		{
 			result=result*i;	
