@@ -1,1 +1,1 @@
-# Beginner level algorithms 
+# Various little projects 
