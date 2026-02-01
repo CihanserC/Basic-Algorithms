@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace lab9_v2
 {
@@ -69,9 +69,9 @@ namespace lab9_v2
 			}
 		}
 
-		// 4. SORU 
+		// 4. QUESTION 
 
-		// garip çevirse de mantığı böyle.
+		// Although it translates oddly, this is the logic.
 
 		static void genderconverter(){
 		
@@ -164,7 +164,7 @@ namespace lab9_v2
 			}
 		}
 
-		// 9. SORU	tam olmadı ???!?!
+		// 9. QUESTION	not complete ???!?!
 		/*
 		static void pilish(){
 
@@ -190,7 +190,7 @@ namespace lab9_v2
 			}
 		}
 		*/
-		// 10. SORU			tam olmadı ?!?!?!?!?!?!
+		// 10. QUESTION		not complete ?!?!?!?!?!?!
 		/*
 		static void majoritychar(){
 
@@ -208,23 +208,23 @@ namespace lab9_v2
 
 				for (int j = 0; j < alphabet.Length; j++) {
 				
-					if (s [i] == alphabet [i]) {
-						alphabucket[i] += 1;
-					}
+				if (s [i] == alphabet [i]) {
+					alphabucket[i] += 1;
 				}
+			}
 
-			}
-			for(int i=0;i<alphabucket.Length;i++){
-				if(alphabucket[i]>max){
-					max = alphabucket[i];
-					c = alphabet [i];
-				}
-			}
-			Console.Write("Repetition number : "+max+"\nLetter : "+c);
-		
 		}
-		*/
-		// 11. SORU
+		for(int i=0;i<alphabucket.Length;i++){
+			if(alphabucket[i]>max){
+				max = alphabucket[i];
+				c = alphabet [i];
+			}
+		}
+		Console.Write("Repetition number : "+max+"\nLetter : "+c);
+	
+	}
+	*/
+	// 11. QUESTION
 
 		static void makeplural(){
 
@@ -245,12 +245,12 @@ namespace lab9_v2
 			} else {
 				result += str+"s";
 			
-			}
-			Console.WriteLine (result);
-
 		}
+		Console.WriteLine (result);
 
-		// 12. SORU
+	}
+
+	// 12. QUESTION
 
 		static void matchesnecessary(){
 

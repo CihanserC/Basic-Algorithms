@@ -65,7 +65,7 @@ void loop(){
       mode = Serial.parseInt();
       Serial.print("Mode : ");
       Serial.print(mode);
-        // iflere mode u implemente et. ve 2 mod fonksiyonu yaz.
+        // implement mode into ifs and write 2 mode functions.
       if(alg == 1 && mode == 1){
   
         Serial.print("\nMidsquare selected");
@@ -193,7 +193,7 @@ int Lcg(long int lseed){    //Linear congruential generator(LCG)
    
     Serial.print("\nPress 1 to stop.\n");
 
-     while(true){    // sonsuz döngü
+     while(true){    // infinite loop
         if(algorithm == 1){
 
          result = midsqr(seed);
@@ -238,7 +238,7 @@ int Lcg(long int lseed){    //Linear congruential generator(LCG)
   }
 
   void Mode2(int algorithm,long int mseed){
-     // sürekli sayı üretip kullanıcı tuşa basınca durup son sayıyı yazdırsın
+     // continuously generate numbers and when user presses a key, stop and print the last number
       
       int result;
       int sseed = mseed;

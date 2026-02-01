@@ -1,13 +1,13 @@
 
 main:
 
-	addi $t0,$zero,0  #	SUM VARİABLE	= t0
-	addi $t1,$zero,10 #	A VARİABLE	= t1
-	addi $t2,$zero,18 #	B VARİABLE	= t2
+	addi $t0,$zero,0  # SUM VARIABLE	= t0
+	addi $t1,$zero,10 # A VARIABLE	= t1
+	addi $t2,$zero,18 # B VARIABLE	= t2
 	
 while:
 	
-	slt  $t3,$t2,$t1  #	if(t2 < t1 ) then set 1 to t3 else set 0 to t3
+	slt  $t3,$t2,$t1  # if(t2 < t1 ) then set 1 to t3 else set 0 to t3
 	bne $t3,$zero,printexit
 	
 	add $t0,$t0,$t1 #	t0 = t0 + t1
@@ -21,5 +21,5 @@ printexit:
 	add $a0,$zero,$t0 		
 	syscall	
 
-	add  $v0,$zero,10 #	Program is done
+	add  $v0,$zero,10 # Program is done
 	syscall

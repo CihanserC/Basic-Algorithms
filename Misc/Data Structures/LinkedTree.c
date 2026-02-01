@@ -200,7 +200,7 @@ LINKED_TREE_AVL_NODE linked_tree_insert(LINKED_TREE_AVL_NODE node, void *data) {
 
 				if(temp->left == node){
 					TrueFalse = 1;
-				}else if(temp->right == node){//	CONTROL OF WHİCH LİNK IS LAST ONE
+				}else if(temp->right == node){// CONTROL OF WHICH LINK IS LAST ONE
 					TrueFalse = 2;
 				}
 
@@ -210,18 +210,17 @@ LINKED_TREE_AVL_NODE linked_tree_insert(LINKED_TREE_AVL_NODE node, void *data) {
 				i = 1;
 				TrueFalse = 3;
 			}
-			if(node->height > 0){				//LEFT ERROR
+			if(node->height > 0){	//LEFT ERROR
 
 				parent = node->left;
 
-				if(node->left->height == 1 || node->left->height == 0 ){				//LEFT-LEFT ERROR
+				if(node->left->height == 1 || node->left->height == 0 ){	//LEFT-LEFT ERROR
 
-																		// Boolean for how we understand link with pop which node child or parent(This case Parent to Left)
+					// Boolean for how we understand link with pop which node child or parent(This case Parent to Left)
 					node = RightRotate(node);
 
-				}else if(node->left->height == -1){										//LEFT-RİGHT ERROR
-
-																		// Boolean for how we understand link with pop which node child or parent(This case Child to left)
+				}else if(node->left->height == -1){		//LEFT-RIGHT ERROR
+					// Boolean for how we understand link with pop which node child or parent(This case Child to left)
 					node->left = LeftRotate(parent);
 					node = RightRotate(node);
 
@@ -231,15 +230,15 @@ LINKED_TREE_AVL_NODE linked_tree_insert(LINKED_TREE_AVL_NODE node, void *data) {
 
 				parent = node->right;
 
-				if(node->right->height == 1){											//RIGHT-LEFT ERROR
+				if(node->right->height == 1){		//RIGHT-LEFT ERROR
 
-																		// Boolean for how we understand link with pop which node child or parent(This case Child to right)
+					// Boolean for how we understand link with pop which node child or parent(This case Child to right)
 					node->right = RightRotate(parent);
 					node = LeftRotate(node);
 
 				}else if(node->right->height == 0 || node->right->height == -1){	//RIGHT-RIGHT ERROR
 
-																		// Boolean for how we understand link with pop which node child or parent(This case Parent to right)
+					// Boolean for how we understand link with pop which node child or parent(This case Parent to right)
 					node = LeftRotate(node);
 				}
 
@@ -320,11 +319,11 @@ LINKED_TREE_AVL_NODE linked_tree_delete(LINKED_TREE_AVL_NODE node, void *data)
 					free(node);
 					temp->left = NULL;
 
-				}else{						// I DID THIS IF ELSE BECAUSE I CAN NOT DELETE ONE NODE WİTH FREE AND NULL THERE İS ALWAYS NODE HAVE A DATA = 0
+				}else{						
 
 					free(node);
 					temp->right = NULL;
-				}
+				}				// I DID THIS IF ELSE BECAUSE I CAN NOT DELETE ONE NODE WITH FREE AND NULL THERE IS ALWAYS NODE HAVE A DATA = 0
 
 				node = temp;
 
@@ -403,7 +402,7 @@ LINKED_TREE_AVL_NODE linked_tree_delete(LINKED_TREE_AVL_NODE node, void *data)
 
 				if(temp->left == node){
 					TrueFalse = 1;
-				}else if(temp->right == node){		//	CONTROL OF WHİCH LİNK IS LAST ONE
+				}else if(temp->right == node){		// CONTROL OF WHICH LINK IS LAST ONE
 					TrueFalse = 2;
 				}
 
@@ -423,7 +422,7 @@ LINKED_TREE_AVL_NODE linked_tree_delete(LINKED_TREE_AVL_NODE node, void *data)
 																	// Boolean for how we understand link with pop which node child or parent(This case Parent to Left)
 					node = RightRotate(node);
 
-				}else if(node->left->height == -1){								//LEFT-RİGHT ERROR
+				}else if(node->left->height == -1){								//LEFT-RIGHT ERROR
 
 																	// Boolean for how we understand link with pop which node child or parent(This case Child to left)
 					node->left = LeftRotate(parent);

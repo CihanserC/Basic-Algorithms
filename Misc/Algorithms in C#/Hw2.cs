@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace homework_2
 {
@@ -42,9 +42,9 @@ namespace homework_2
 		public static void Main (string[] args)
 		{
 
-			int fact=5;				// faktoriyel değeri belirler
-			int coefficient=3 ; 	// x li terimin katsayısı
-			int exp=2;				// x li terimin üssü
+			int fact=5;				// determines factorial value
+			int coefficient=3 ; 	// coefficient of the x term
+			int exp=2;				// exponent of the x term
 			int formula;
 			double pay;
 			double payda;

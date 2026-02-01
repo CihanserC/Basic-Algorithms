@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 // String Search Program 
 
@@ -21,15 +21,15 @@ namespace ConsoleApp1
 			int result = 0;
 			if (input.Contains("*") == true && input.Contains("-") == false)
 			{
-				result = 1;     // Yıldız var çizgi yok.
+				result = 1;     // Star exists, dash does not.
 			}
 			else if (input.Contains("-") == true && input.Contains("*") == false)
 			{
-				result = 2;     // Çizgi var yıldız yok.
+				result = 2;     // Dash exists, star does not.
 			}
 			else if (input.Contains("*") == true && input.Contains("-") == true)
 			{
-				result = 3;     // Yıldız var Çizgi var.
+				result = 3;     // Star and dash both exist.
 			}
 			//Console.WriteLine("Analysis : " + result);
 
@@ -91,15 +91,15 @@ namespace ConsoleApp1
 			{
 				if (input[i] == '-' && i == 0)
 				{
-					dash = 1;   //dash başta
+					dash = 1;   // dash at beginning
 				}
 				else if (input[i] == '-' && i != 0 && i != input.Length - 1)
 				{
-					dash = 2;   //dash ortada
+					dash = 2;   // dash in middle
 				}
 				else if (input[i] == '-' && i == input.Length - 1)
 				{
-					dash = 3;   //dash sonda
+					dash = 3;   // dash at end
 				}
 			}
 			//Console.WriteLine("Dash : " + dash);
@@ -115,15 +115,15 @@ namespace ConsoleApp1
 			{
 				if (input[i] == '*' && i == 0)
 				{
-					star = 1;   //star başta
+					star = 1;   // star at beginning
 				}
 				else if (input[i] == '*' && i != 0 && i != input.Length - 1)
 				{
-					star = 2;   //star ortada
+					star = 2;   // star in middle
 				}
 				else if (input[i] == '*' && i == input.Length - 1)
 				{
-					star = 3;   //star sonda
+					star = 3;   // star at end
 				}
 			}
 			//Console.WriteLine("Star : " + star);
@@ -134,7 +134,7 @@ namespace ConsoleApp1
 
 		public static void find1(string input, string[] words,int result)
 		{   
-			//başında veya sonunda sadece yıldız veya sadece kısa çizgi olan durumlar için
+			// for cases with only star or only dash at the beginning or end
 
 			string restore = "";
 			for (int i = 0; i < input.Length; i++)
@@ -170,7 +170,7 @@ namespace ConsoleApp1
 
 		public static void find2(string input, string[] words,int result)
 		{
-			// arasında sadece yıldız veya sadece kısa çizgi olan durumlar için
+			// for cases with only star or only dash in between
 			string restore = "";
 			string restore2 = "";
 			int index = 0;
@@ -211,7 +211,7 @@ namespace ConsoleApp1
 
 		public static void find3(string input, string[] words)
 		{
-			// hem yıldız hem kısa çizgi olan inputlar için
+			// for inputs with both star and dash
 
 			string restore  = "" ;
 			string restore2 = "" ;
@@ -254,8 +254,8 @@ namespace ConsoleApp1
 			{
 				if (words[i].Contains(restore) && words[i].Contains(restore2) && words[i].Contains(restore3))
 				{
-					// o-u*ak inputunda iki tane otursak outputu çıkması hata değildir textte 2 kere otursak yazdığı 
-					//için ikisini de yazdırmıştır.
+					// Two "otursak" outputs in the "o-u*ak" input is not an error because "otursak" appears twice in the text,
+					// so both are printed.
 					Console.WriteLine("Matching words : " + words[i]);
 				}
 			}

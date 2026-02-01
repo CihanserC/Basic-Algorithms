@@ -4,7 +4,7 @@ main:
 	addi $t1,$zero,6 	# t1 = B = 6
 	addi $t2,$zero,1	# t2 = Result = 1 
 	
-	add $a1,$zero,$t2	# a0 a bilerek ellemedim çünkü print te kullanılıyor.
+	add $a1,$zero,$t2	# I intentionally didn't touch a0 because it is used in print.
 	jal print
 	add $t2,$zero,$a1
 	

@@ -1,7 +1,7 @@
 main:
-	addi $t0,$zero,0 	#	SUM VARİABLE	= t0
-	addi $t1,$zero,10	#	A   VARİABLE	= t1
-	addi $t2,$zero,18	#	B   VARİABLE	= t2
+	addi $t0,$zero,0 	# SUM VARIABLE	= t0
+	addi $t1,$zero,10	# A   VARIABLE	= t1
+	addi $t2,$zero,18	# B   VARIABLE	= t2
 	
 	while:
 		
